@@ -1,0 +1,341 @@
+body {
+	background-color: #f7f7f7;
+
+	.site-header {
+		h1 {
+			text-align: center;
+		}
+
+		.info-list {
+			display: flex;
+			justify-content: space-between;
+
+			li {
+				background-color: #ffffff;
+				color: #babed0;
+				width: calc(100% / 3);
+				padding: 5px 10px;
+				border-radius: 5px;
+				font-weight: 600;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				time, span {
+					font-size: 24px;
+				}
+
+				i {
+					font-size: 24px;
+				}
+
+				& + li {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	.main-content {
+		margin-top: 20px;
+
+		.container {
+			padding: 0 40px;
+			display: flex;
+			justify-content: space-between;
+
+			.posts-wrapper {
+				background-color: #fff;
+				width: 70%;
+				padding: 20px;
+
+				.answers-wrapper {
+
+					.detail-wrapper {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						border: 1px solid #999999;
+						flex-wrap: wrap;
+
+						.interview-wrapper {
+							position: relative;
+							flex-grow: 1;
+
+							h3 {
+								font-weight: 600;
+
+								.exp {
+									font-weight: 300;
+								}
+							}
+
+							.date {
+								right: 100px;
+								top: 50%;
+								position: absolute;
+								transform: translateY(-50%);
+							}
+
+							.new {
+								position: absolute;
+								right: 35px;
+								background-color: #999999;
+								top: 50%;
+								transform: translateY(-50%);
+								border-radius: 50%;
+								padding: 5px;
+							}
+						}
+
+						.right-column {
+							background-color: #f2f2f2;
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							padding: 5px;
+							transition: all ease .3s;
+
+							&:hover,
+							&:focus {
+								background-color: #999999;
+							}
+
+							a {
+								color: #000;
+							}
+						}
+					}
+				}
+
+				.interviews-wrapper {
+					.detail-wrapper {
+						display: flex;
+						justify-content: space-between;
+						flex-wrap: wrap;
+
+						li {
+							display: flex;
+							width: 100%;
+							border: 1px solid #999999;
+							align-items: center;
+
+							.interview-wrapper {
+								flex-grow: 1;
+								position: relative;
+
+								.date, .new {
+									position: absolute;
+									top: 50%;
+									transform: translateY(-50%);
+								}
+
+								.date {
+									right: 100px;
+								}
+
+								.new {
+									right: 35px;
+									background-color: #999999;
+									top: 50%;
+									transform: translateY(-50%);
+									border-radius: 50%;
+									padding: 5px;
+								}
+							}
+
+							.right-column {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								padding: 5px;
+								transition: all ease .3s;
+								flex-direction: column;
+
+								.link-wrapper {
+									background-color: #f2f2f2;
+									display: flex;
+									align-items: center;
+									justify-content: space-between;
+									padding: 5px;
+									width: 100%;
+
+									a {
+										color: #000;
+									}
+
+									i {
+										color: #babed0;
+									}
+
+									&:hover,
+									&:focus {
+										background-color: #999999;
+									}
+								}
+
+								.date-wrapper {
+									padding: 5px;
+									margin-top: 5px;
+									background-color: #f2f2f2;
+
+									form {
+										position: relative;
+
+										input[type="date"] {
+											position: relative;
+											padding: 10px;
+										}
+
+										input[type="date"]::-webkit-calendar-picker-indicator {
+											color: transparent;
+											background: none;
+											z-index: 1;
+										}
+
+										input[type="date"]::before {
+											background: none;
+											display: block;
+											font-family: 'FontAwesome';
+											content: '\f073';
+											width: 20px;
+											height: 25px;
+											position: absolute;
+											top: 12px;
+											right: 6px;
+											color: #999;
+											font-size: 20px;
+										}
+									}
+								}
+
+
+							}
+						}
+					}
+				}
+			}
+
+			aside {
+				width: 25%;
+
+				.job-info {
+					display: flex;
+					flex-direction: column;
+
+					li {
+						border: 1px solid #999999;
+						padding: 0 10px 10px;
+
+						& + li {
+							margin-top: 10px;
+						}
+
+						.fa-share-alt {
+							cursor: pointer;
+						}
+					}
+
+					li:nth-child(1) {
+						display: flex;
+						flex-wrap: wrap;
+						align-items: center;
+						justify-content: space-around;
+
+						i {
+							width: 40px;
+							height: 40px;
+							font-size: 40px;
+						}
+
+						h2 {
+							width: 80%;
+							font-size: 18px;
+
+							span {
+								font-size: 14px;
+								font-weight: 300;
+							}
+						}
+
+						.recruiter-info {
+							display: flex;
+							padding-bottom: 5px;
+
+							li {
+								background-color: #f2f2f2;
+								margin-right: 10px;
+								margin-top: 0;
+								border: none;
+
+
+								a {
+									color: #000;
+
+									i {
+										font-size: 16px;
+										width: auto;
+										height: auto;
+									}
+								}
+							}
+						}
+					}
+
+					li:nth-child(2) {
+						display: flex;
+						flex-wrap: wrap;
+						align-items: center;
+
+						h2 {
+							font-size: 18px;
+							width: 100%;
+						}
+
+						.list-jobs {
+							display: flex;
+							justify-content: space-between;
+
+							li {
+								border: none;
+								margin: 0 10px 0 0;
+							}
+						}
+					}
+
+					li:nth-child(3) {
+						.title-wrapper {
+							display: flex;
+							justify-content: space-between;
+
+							h2 {
+								font-size: 18px;
+							}
+						}
+
+						h3 {
+							font-size: 18px;
+						}
+
+						p {
+							font-size: 14px;
+							font-weight: 300;
+						}
+
+						.stars-share {
+							display: flex;
+							justify-content: space-between;
+						}
+					}
+
+					li:nth-child(4) {
+						.stars-share {
+							display: flex;
+							justify-content: space-between;
+						}
+					}
+				}
+			}
+		}
+	}
+}
