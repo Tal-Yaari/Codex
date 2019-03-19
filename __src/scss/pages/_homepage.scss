@@ -119,6 +119,7 @@ body {
 							width: 100%;
 							border: 1px solid #999999;
 							align-items: center;
+							position: relative;
 
 							.interview-wrapper {
 								flex-grow: 1;
@@ -208,8 +209,13 @@ body {
 										}
 									}
 								}
+							}
 
-
+							.read-more {
+								position: absolute;
+								bottom: 17px;
+								right: 28%;
+								text-decoration: underline;
 							}
 						}
 					}
@@ -226,6 +232,7 @@ body {
 					li {
 						border: 1px solid #999999;
 						padding: 0 10px 10px;
+						background-color: #f2f2f2;
 
 						& + li {
 							margin-top: 10px;
@@ -263,7 +270,6 @@ body {
 							padding-bottom: 5px;
 
 							li {
-								background-color: #f2f2f2;
 								margin-right: 10px;
 								margin-top: 0;
 								border: none;
@@ -325,6 +331,13 @@ body {
 						.stars-share {
 							display: flex;
 							justify-content: space-between;
+
+							.fa-star {
+								&:hover,
+								&:focus {
+									color: gold;
+								}
+							}
 						}
 					}
 
@@ -332,6 +345,21 @@ body {
 						.stars-share {
 							display: flex;
 							justify-content: space-between;
+
+							.fa-star {
+								&:hover,
+								&:focus {
+									color: gold;
+								}
+							}
+						}
+
+						a {
+							background-color: #fff;
+							color: #babed0;
+							text-align: center;
+							display: block;
+							margin-top: 10px;
 						}
 					}
 				}
